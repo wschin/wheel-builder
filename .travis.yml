@@ -1,80 +1,69 @@
 env:
   global:
-    - REPO_DIR=onnx
-    - BUILD_COMMIT=553df22c67bee5f0fe6599cff60f1afc6748c635
-    - PLAT=x86_64
-    - PB_VERSION=2.6.1
-    - UNICODE_WIDTH=32
-    - REPO=https://upload.pypi.org/legacy/
-    - TEST_REPO=https://test.pypi.org/legacy/
-    - secure: QoYek8syaGZ0WxUCJqZvRvmSWsPVg7tlON8yPcgc4VgqSgAb2bNt4Na5WPiub6PFs/sIc9vEvMty3tcjMfkW4aUtalSnLJAx1S+EArhhY8KRkCxWmNPv8PQi6f769tgbQHCTFFOa+b7Y6jY6Z7jAQ2AJ+Yu6eblq7edU/yV1coP6Gd9zrBwUsDrGgy366O819DeVseozohw62sIQmkk901b8T5Jwtel9Xsu/wdmAlI6d/mTP1//wgFhaENGUhZle9K+0Y/mNlvmDn6axWl5q2WqTbt/nhEWNJHz/Fr13YND/eO8Xt3JBR8vs04+4c1+dqy/nS27IoEmdSxi06GuKqc82muSVODUhpQ0P4z/4EqtCvlHWEi7VtEfQBB0aAePvQz0lAVAhfZE9376XtQnXbaRWZUDg05YFuUHaYhHlRe5N3fDyYzyJyUWsJgkvqhTumrENPRuWBWYZSXnP98XHVTHkmYG+aMUjmzpLuGIkcS4SKDV594ikyN6ERkDMsclc/nZBJLyhivi+okrq3LtAHpY1bBALXcvmZsfMdGrDv904X1ifC/CQpha5N0Xj+2mYv76K3MnEj8WdWYPBwp5gNiKH59bRcDFiMkaNwwXGvGVcDsIg0uEaO29pcRfZeZYemAzS/3Lht7zzzNxL6sM//2+ufRaIlyx0xzjc9uTxtZA=
-    - secure: U2EmHLHZoyi6xuX3SthN4U9N7akwPzEkAv4F4TAoh+PZfQzJqverQ/yjlEMz5U/YbD5d2dQ0GjAZEcwoRTb1RfhYYRAT1aAGxezIcNUcBe70tPbO5u86a2GBL7mFDYcUWUAjxUiQ2vcGz/YO2juXmxxGXPLUBQ1qatnJbull333bi4N1fipsK6fV3SUphIZhi81pzHJZ8gDJln1vWAVZg669NhUu3HWmV4Q9TQDUo0oJj6WGTZAFnPoeVaXGex3xJ/cCOcz9N6beUpXBWeCCmwTrXc68h/DX28hKkLyRIfVbCRCvaDXrFkOis5boZJqfMYFMNqsyKwATWYnU7JVBwSgFWsLI9ItLCX+GrYOzM8odMOi3qtWbtgryghPNZtg8lKB2b6sK3f0/Awr/ccrSQ/D9i8ZrQF9xei+XdiJE7gtBvYFFfg4pOvvQHYMM0A5SIbc1dm8E4PGwZI/YTpTBeE3jgW4igZ/uTtYMcVLb14V/D/yHdqAE9Edzok1GsTSocnjdMXMSMYZEwY9/PiD9EPbtzfxTL8Mrgw7jfU7PxPHY1pzR/lXqZ4wuwHL7/+aGjQW2PCaIKXKMwJpGWibmCyZ4vcPdWCmNt/F9fxmWfxXLbvJSlOKTnqK7PKoqX3G4dfgrOZF5DqDTL8blfulX0IYoSze8v8L2qebF+nBfCUI=
-
+  - REPO_DIR=onnx
+  - BUILD_COMMIT=553df22c67bee5f0fe6599cff60f1afc6748c635
+  - PLAT=x86_64
+  - PB_VERSION=2.6.1
+  - UNICODE_WIDTH=32
+  - REPO=https://upload.pypi.org/legacy/
+  - TEST_REPO=https://test.pypi.org/legacy/
+  - secure: QoYek8syaGZ0WxUCJqZvRvmSWsPVg7tlON8yPcgc4VgqSgAb2bNt4Na5WPiub6PFs/sIc9vEvMty3tcjMfkW4aUtalSnLJAx1S+EArhhY8KRkCxWmNPv8PQi6f769tgbQHCTFFOa+b7Y6jY6Z7jAQ2AJ+Yu6eblq7edU/yV1coP6Gd9zrBwUsDrGgy366O819DeVseozohw62sIQmkk901b8T5Jwtel9Xsu/wdmAlI6d/mTP1//wgFhaENGUhZle9K+0Y/mNlvmDn6axWl5q2WqTbt/nhEWNJHz/Fr13YND/eO8Xt3JBR8vs04+4c1+dqy/nS27IoEmdSxi06GuKqc82muSVODUhpQ0P4z/4EqtCvlHWEi7VtEfQBB0aAePvQz0lAVAhfZE9376XtQnXbaRWZUDg05YFuUHaYhHlRe5N3fDyYzyJyUWsJgkvqhTumrENPRuWBWYZSXnP98XHVTHkmYG+aMUjmzpLuGIkcS4SKDV594ikyN6ERkDMsclc/nZBJLyhivi+okrq3LtAHpY1bBALXcvmZsfMdGrDv904X1ifC/CQpha5N0Xj+2mYv76K3MnEj8WdWYPBwp5gNiKH59bRcDFiMkaNwwXGvGVcDsIg0uEaO29pcRfZeZYemAzS/3Lht7zzzNxL6sM//2+ufRaIlyx0xzjc9uTxtZA=
+  - secure: U2EmHLHZoyi6xuX3SthN4U9N7akwPzEkAv4F4TAoh+PZfQzJqverQ/yjlEMz5U/YbD5d2dQ0GjAZEcwoRTb1RfhYYRAT1aAGxezIcNUcBe70tPbO5u86a2GBL7mFDYcUWUAjxUiQ2vcGz/YO2juXmxxGXPLUBQ1qatnJbull333bi4N1fipsK6fV3SUphIZhi81pzHJZ8gDJln1vWAVZg669NhUu3HWmV4Q9TQDUo0oJj6WGTZAFnPoeVaXGex3xJ/cCOcz9N6beUpXBWeCCmwTrXc68h/DX28hKkLyRIfVbCRCvaDXrFkOis5boZJqfMYFMNqsyKwATWYnU7JVBwSgFWsLI9ItLCX+GrYOzM8odMOi3qtWbtgryghPNZtg8lKB2b6sK3f0/Awr/ccrSQ/D9i8ZrQF9xei+XdiJE7gtBvYFFfg4pOvvQHYMM0A5SIbc1dm8E4PGwZI/YTpTBeE3jgW4igZ/uTtYMcVLb14V/D/yHdqAE9Edzok1GsTSocnjdMXMSMYZEwY9/PiD9EPbtzfxTL8Mrgw7jfU7PxPHY1pzR/lXqZ4wuwHL7/+aGjQW2PCaIKXKMwJpGWibmCyZ4vcPdWCmNt/F9fxmWfxXLbvJSlOKTnqK7PKoqX3G4dfgrOZF5DqDTL8blfulX0IYoSze8v8L2qebF+nBfCUI=
+  - secure: GO8kOvQCSJj5XvW/uGnhwOZlUZgLcM/kjq81MYWjta67dMw+Q8wYScFH3v7OykfMK9YGglkzUaPimH4bOvvT3J4AxczE4V5yD/nfW9rVtbJwmSSGFtUQHvXTDxKvv3LwiA0VaC3iI6i/EG1vsN0r+IRvxtHSA2F8hGt+l4dsAhvMcymHt0BLC0zVHbEVVka2WpkCd+MdeFvAj4j1T5ULdi4eOgiP6se+2Md2SK8t3pm+ZtTmQeBn3xOYFA/LJnbOkzJOsdFfsUBh+oSj2kuUUnbDyMp3iGYRN2rNJ/bX1XCOwJamACuMrjab9cgVkzXjPKDDekjcbeX1FDx/ed9/WqIz1X4eOdXUxwi97ast0uALN4eJ2pCVrhgdd7RMhwrf4ENQc78FNKB9Pa0UteXt8sNJPnE8zRk5F5/obdzr7M9Rakmw1dMeBFbszihZnh5HOPt25vcjMVXjmqLwFavMIPLCFO3hFBYpFpCdsqNi0YWuMHmano1T1zLhIYitcNYQUkKPyuZzfEFE49MpsXxMGwSR2kBLJRem2kJLtnnwnCFvJ46D6D52Y0KLcXsYg8yfeKwpX+xzaYSXlRGbjwKQ+l3Y0los7kIviZB8BRUmHyutDQkEZRvGSghKz2KfWXIwx55uxKgdEful8B1uIi1DFQRwChlY1TeDBo3bWLdLsk0=
+  - secure: LQlDXlg1Lp+2BGavlZGq/FH/cVF/eK2eUIdTSkrQ9lV3cX/31z7iVY4TBrVeLIDxiIIVxSOphNHGmL1VWa855byPsEW+RUjiD7aZ27Bsoq1UB/TMb3oatpzxx0gMrndwFZImqzUm0AZWz5gSz/KsYjYGNXj08nwQa9uwDlWHrv3/0WeKMP2dL9DwdE1AqGSFWWa8iQKgW1nqF/OQ/Cpi0zz+O4eRVsNHA9CpWXNTnB5FY1S4vT5G42WiEs5d+aAao1a9e8GOpxjMCrUsTjYoHuloYrYRbjnDjK5NdbIAlSsc0Rnpm3WIRX9f8GI5DoovnCy1J/VhQOzUcYLND3XBF0TjihEyPbYCAWCoIf0RQDizQ4ZTSXF+RfmNc81uuDc/YHqi3HBkKFAE27Ve1Y5nEcA5t+kh1KnzmjJwjFinUOIO50/lgGDrr2igHobMsbjg1Zge6+nVgWJuomAWzc5QomHsFGQZ3QOg2iVQ9fsb68HO2+nq6OrJmC4BAO1jThkLnXwDSDVsHYYIyU0XY4A4A1yuyvh0QD6Ng3VbGV5P5tIjZMzpo8EuojV2RLbfEbpAg3mpSKYj4y7ejBEyUfpwkMtVUjd1dKH0LELV6vgyBGtl+LYuhDhV5eEMk5JIvtb0aAZekX3XMwnoFj1PB7sgBUsX0YaxgjNzLbJpRMmvbSk=
 language: python
-# Default Python version is usually 2.7
 python: 3.5
 sudo: required
 dist: trusty
 services: docker
-# Force xcode 6.4 image to work round
-# https://github.com/python-pillow/pillow-wheels/issues/45
 osx_image: xcode9.3beta
-
 matrix:
   exclude:
-    # Exclude the default Python 3.5 build
-    - python: 3.5
+  - python: 3.5
   include:
   - os: osx
     language: generic
     sudo: required
     osx_image: xcode9.3beta
     env:
-      - MB_PYTHON_VERSION=3.5
-      - ONNX_ML=1
-      - MACOSX_DEPLOYMENT_TARGET=10.9
-
+    - MB_PYTHON_VERSION=3.5
+    - ONNX_ML=1
+    - MACOSX_DEPLOYMENT_TARGET=10.9
   - os: osx
     language: generic
     sudo: required
     osx_image: xcode9.3beta
     env:
-      - MB_PYTHON_VERSION=3.6
-      - ONNX_ML=1
-      - MACOSX_DEPLOYMENT_TARGET=10.9
-  
+    - MB_PYTHON_VERSION=3.6
+    - ONNX_ML=1
+    - MACOSX_DEPLOYMENT_TARGET=10.9
   - os: osx
     language: generic
     sudo: required
     osx_image: xcode9.3beta
     env:
-      - MB_PYTHON_VERSION=3.7
-      - ONNX_ML=1
-      - MACOSX_DEPLOYMENT_TARGET=10.9
-  
+    - MB_PYTHON_VERSION=3.7
+    - ONNX_ML=1
+    - MACOSX_DEPLOYMENT_TARGET=10.9
   - os: osx
     language: generic
     sudo: required
     osx_image: xcode9.3beta
     env:
-      - MB_PYTHON_VERSION=2.7
-      - ONNX_ML=1
-      - MACOSX_DEPLOYMENT_TARGET=10.9
-
+    - MB_PYTHON_VERSION=2.7
+    - ONNX_ML=1
+    - MACOSX_DEPLOYMENT_TARGET=10.9
 before_install:
-  - source multibuild/common_utils.sh;
-  - source multibuild/travis_steps.sh;
-  - before_install;
-
+- source multibuild/common_utils.sh;
+- source multibuild/travis_steps.sh;
+- before_install;
 install:
-  - clean_code $REPO_DIR $BUILD_COMMIT;
-  - build_wheel $REPO_DIR $PLAT;
-
+- clean_code $REPO_DIR $BUILD_COMMIT;
+- build_wheel $REPO_DIR $PLAT;
 script:
-  - install_run $PLAT
-
+- install_run $PLAT
 after_success:
-- >
+- |
   if [ -n "$TRAVIS_TAG" ]; then
     pip install twine;
     pip install pyOpenSSL ndg-httpsclient pyasn1 || true;
@@ -83,7 +72,7 @@ after_success:
   else
     echo "Not deploying as not a tagged commit.";
   fi
-- >
+- |
   if [ "$TRAVIS_BRANCH" == "pypi_test" ]; then
     pip install twine;
     pip install pyOpenSSL ndg-httpsclient pyasn1 || true;
@@ -94,7 +83,6 @@ after_success:
     echo $TRAVIS_BRANCH;
     echo "Not deploying as not a commit on test branch.";
   fi
-
 cache:
 - timeout: 300
 - directories:
