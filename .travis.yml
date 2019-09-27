@@ -53,7 +53,31 @@ matrix:
     - MB_PYTHON_VERSION=2.7
     - ONNX_ML=1
     - MACOSX_DEPLOYMENT_TARGET=10.9
+  - sudo: required
+    services:
+    - docker
+    env:
+    - DOCKER_IMAGE=quay.io/pypa/manylinux1_x86_64
+    - PLAT=manylinux1_x86_64
+  - sudo: required
+    services:
+    - docker
+    env:
+    - DOCKER_IMAGE=quay.io/pypa/manylinux1_i686
+    - PRE_CMD=linux32
+    - PLAT=manylinux1_i686
+  - sudo: required
+    services:
+    - docker
+    env:
+    - DOCKER_IMAGE=quay.io/pypa/manylinux2010_x86_64
+    - PLAT=manylinux2010_x86_64
 before_install:
+- |
+  if [ "$TRAVIS_OS_NAME" != "osx" ]; then 
+    docker pull $DOCKER_IMAGE ;
+    docker start $DOCKER_IMAGE
+  fi
 - source multibuild/common_utils.sh;
 - source multibuild/travis_steps.sh;
 - before_install;
