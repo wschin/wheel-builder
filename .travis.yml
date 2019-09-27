@@ -14,7 +14,7 @@ env:
 language: python
 python: 3.5
 sudo: required
-dist: trusty
+dist: xenial
 services: docker
 osx_image: xcode9.3beta
 matrix:
