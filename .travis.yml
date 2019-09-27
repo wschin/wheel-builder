@@ -100,11 +100,6 @@ matrix:
       - ONNX_ML=1 
       - PLAT=i686
 before_install:
-- |
-  if [ "$TRAVIS_OS_NAME" != "osx" ]; then 
-    docker pull $DOCKER_IMAGE ;
-    docker run -it --mount type=bind,source=${PWD},target=/home $DOCKER_IMAGE  ;
-  fi
 - source multibuild/common_utils.sh;
 - source multibuild/travis_steps.sh;
 - before_install;
