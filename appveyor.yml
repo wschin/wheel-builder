@@ -94,7 +94,7 @@ after_test:
   (
   IF "%APPVEYOR_REPO_TAG%" == "true"
   (
-  python -m pip install twine>=1.5 &&
+  python -m pip install twine==1.3 &&
   set HOME=%USERPROFILE% &&
   python -m twine upload --verbose --skip-existing %_wheel% --repository-url %REPO% -u %USERNAME% -p %PYPI_PASSWORD%
   )
@@ -102,7 +102,7 @@ after_test:
 - >
   IF "%APPVEYOR_REPO_BRANCH%" == "pypi_test"
   (
-  python -m pip install twine>=1.5  &&
+  python -m pip install twine==1.3  &&
   set HOME=%USERPROFILE% &&
   python -m twine upload --verbose --skip-existing %_wheel% --repository-url %TESTREPO% -u %USERNAME% -p %PYPI_PASSWORD%
   )
