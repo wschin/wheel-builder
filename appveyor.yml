@@ -88,8 +88,7 @@ after_test:
 - cmd: set REPO=https://upload.pypi.org/legacy/
 - cmd: set TESTREPO=https://test.pypi.org/legacy/
 - cmd: set USERNAME=%PYPI_USERNAME%
-- cmd: %CONDA_PREFIX%\bin\conda create -y -n twine-publish python=3.6
-- cmd: %CONDA_PREFIX%\bin\conda activate twine-publish
+- cmd: conda upgrade -y python
 # Ensure only master branch can trigger build
 - >
   IF "%APPVEYOR_REPO_BRANCH%" == "master"
