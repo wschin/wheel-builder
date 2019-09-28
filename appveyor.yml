@@ -17,7 +17,7 @@ environment:
     secure: yxxPVzKe7l2XJfGLyTcFtkoFprYWmcBni/BAqAXuQ0s=
   
   PYPI_USERNAME:
-    secure: c3OFIwAYnO1QD2r4Ohy03Q==
+    secure: MPDANsPdkju6nBPNuo/pk+Ds1B/CgUceX/9zlduCfNw=
 
   matrix:
   # onnx_ml enabled by default
