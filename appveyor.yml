@@ -14,10 +14,10 @@ clone_depth: 10
 # pick as per https://www.appveyor.com/docs/build-environment/#python
 environment:
   PYPI_PASSWORD:
-    secure: yxxPVzKe7l2XJfGLyTcFtkoFprYWmcBni/BAqAXuQ0s=
+    secure: MPDANsPdkju6nBPNuo/pk+Ds1B/CgUceX/9zlduCfNw=
   
   PYPI_USERNAME:
-    secure: MPDANsPdkju6nBPNuo/pk+Ds1B/CgUceX/9zlduCfNw=
+    secure: dVv1Nltm87rX9BbYi/BDMg==
 
   matrix:
   # onnx_ml enabled by default
