@@ -88,13 +88,15 @@ after_test:
 - cmd: set REPO=https://upload.pypi.org/legacy/
 - cmd: set TESTREPO=https://test.pypi.org/legacy/
 - cmd: set USERNAME=%PYPI_USERNAME%
+- cmd: conda create -n -y twine-publish python=3.6
+- cmd: conda activate twine-publish
 # Ensure only master branch can trigger build
 - >
   IF "%APPVEYOR_REPO_BRANCH%" == "master"
   (
   IF "%APPVEYOR_REPO_TAG%" == "true"
   (
-  python -m pip install twine==1.3 &&
+  python -m pip install twine &&
   set HOME=%USERPROFILE% &&
   python -m twine upload --verbose --skip-existing %_wheel% --repository-url %REPO% -u %USERNAME% -p %PYPI_PASSWORD%
   )
@@ -102,7 +104,7 @@ after_test:
 - >
   IF "%APPVEYOR_REPO_BRANCH%" == "pypi_test"
   (
-  python -m pip install twine==1.3  &&
+  python -m pip install twine &&
   set HOME=%USERPROFILE% &&
   python -m twine upload --verbose --skip-existing %_wheel% --repository-url %TESTREPO% -u %USERNAME% -p %PYPI_PASSWORD%
   )
